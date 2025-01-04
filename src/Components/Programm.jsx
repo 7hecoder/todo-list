@@ -1,0 +1,18 @@
+import React from 'react'
+
+const Programm = () => {
+  return (
+    <div className="app bg-slate-100 min-h-[85vh] m-5 border border-black rounded-lg">
+        <h1 className='font-bold text-center text-2xl'>uTask - Manage your todos at one place</h1>
+        <div className="addTodo my-5 flex flex-col gap-4">
+            <h2 className='text-2xl font-semibold mx-4'>Add a new Todo</h2>
+            <div className="flex">
+                <input type="text" className='w-full rounded-lg ml-4 px-5 py-1' />
+                <button className='bg-slate-800 mx-2 rounded-full mr-4 hover:bg-slate-950 disabled:bg-slate-500 p-4 py-2 text-sm font-bold text-white'>Add</button>
+            </div>
+        </div>
+    </div>
+  )
+}
+
+export default Programm
