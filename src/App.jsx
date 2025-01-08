@@ -3,6 +3,7 @@ import Navbar from './Components/Navbar';
 import { v4 as uuidv4 } from 'uuid';
 import { FaEdit } from 'react-icons/fa';
 import { AiFillDelete } from 'react-icons/ai';
+import Footer from './Components/Footer';
 
 function App() {
   const [todo, setTodo] = useState("");
@@ -112,6 +113,7 @@ function App() {
           })}
         </div>
       </div>
+      <Footer />
     </>
   );
 }
