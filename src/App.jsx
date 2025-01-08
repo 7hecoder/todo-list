@@ -101,11 +101,11 @@ function App() {
                   <div className={item.isCompleted ? "line-through" : ""}>{item.todo}</div>
                 </div>
                 <div className="buttons flex h-full">
-                  <button onClick={(e) => handleEdit(e, item.id)} className='bg-[#e4ac71] hover:bg-[#e49948] p-2 py-1 text-sm font-bold text-white rounded-md mx-1'>
-                    <FaEdit />
+                  <button onClick={(e) => handleEdit(e, item.id)} className='border-none outline-none bg-transparent mx-2'>
+                    <FaEdit className='text-yellow-400' />
                   </button>
-                  <button onClick={(e) => handleDelete(e, item.id)} className='bg-[#e4ac71] hover:bg-[#e49948] p-2 py-1 text-sm font-bold text-white rounded-md mx-1'>
-                    <AiFillDelete />
+                  <button onClick={(e) => handleDelete(e, item.id)} className='border-none outline-none bg-transparent mx-2'>
+                    <AiFillDelete className='text-pink-500'/>
                   </button>
                 </div>
               </div>
