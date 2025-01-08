@@ -32,12 +32,12 @@ const Programm = () => {
         <h2 className='text-lg font-bold mx-3 text-slate-800'>Your To Dos</h2>
         <div className="todos">
 
-        <input onChange={handleCheckbox} className='m-4' type="checkbox" name="" id="show" />
         <label className='mx-1 text-slate-800' htmlFor="show">Show Finished</label>
 
           {todos.map(item=>{
-        return <div key={todo} className="todo flex mx-3 justify-between w-2/4 my-1">
-        <div className="text m-2 text-slate-950">{item.todo}</div>
+            return <div key={todo} className="todo flex mx-3 justify-between w-2/4 my-1">
+        <input onChange={handleCheckbox} className='m-4' type="checkbox" name="" id="show" />
+        <div className={item.isCompleted?"line-through" : ""}>{item.todo}</div>
         <div className="buttons">
             <button onClick={handleEdit} className='bg-slate-800 mx-1 rounded-full hover:bg-slate-950 disabled:bg-slate-500 p-4 py-2 text-sm font-bold text-white'>Edit</button>
             <button onClick={handleDelete}  className='bg-slate-800 mx-1 rounded-full hover:bg-slate-950 disabled:bg-slate-500 p-4 py-2 text-sm font-bold text-white'>Delete</button>
